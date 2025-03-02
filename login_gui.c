@@ -3,21 +3,17 @@
 #include <windows.h>
 #include <wchar.h>
 #include <stdlib.h>
-
 #define ID_USERNAME 101
 #define ID_PASSWORD 102
 #define ID_LOGIN 103
-
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
     static HWND hEditUsername, hEditPassword, hStaticMsg, hLoginButton;
-
     switch (msg)
     {
     case WM_CREATE:
     {
         LPCREATESTRUCT pcs = (LPCREATESTRUCT)lParam;
-
         // Create title
         CreateWindowW(
             L"STATIC",
@@ -31,7 +27,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
             NULL,
             pcs->hInstance,
             NULL);
-
         // Username field with label
         CreateWindowW(
             L"STATIC",
@@ -45,7 +40,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
             NULL,
             pcs->hInstance,
             NULL);
-
         hEditUsername = CreateWindowW(
             L"EDIT",
             L"",
@@ -58,7 +52,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
             (HMENU)ID_USERNAME,
             pcs->hInstance,
             NULL);
-
         // Password field with label
         CreateWindowW(
             L"STATIC",
@@ -72,7 +65,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
             NULL,
             pcs->hInstance,
             NULL);
-
         hEditPassword = CreateWindowW(
             L"EDIT",
             L"",
@@ -85,7 +77,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
             (HMENU)ID_PASSWORD,
             pcs->hInstance,
             NULL);
-
         // Login button
         hLoginButton = CreateWindowW(
             L"BUTTON",
@@ -99,7 +90,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
             (HMENU)ID_LOGIN,
             pcs->hInstance,
             NULL);
-
         // Message display
         hStaticMsg = CreateWindowW(
             L"STATIC",
@@ -113,10 +103,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
             NULL,
             pcs->hInstance,
             NULL);
-
         break;
     }
-
     case WM_COMMAND:
     {
         if (LOWORD(wParam) == ID_LOGIN)
@@ -124,7 +112,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
             wchar_t username[50], password[50];
             GetDlgItemTextW(hWnd, ID_USERNAME, username, 50);
             GetDlgItemTextW(hWnd, ID_PASSWORD, password, 50);
-
             if (wcscmp(username, L"admin") == 0 && wcscmp(password, L"password") == 0)
             {
                 SetWindowTextW(hStaticMsg, L"Login Successful!");
@@ -138,20 +125,16 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
         }
         break;
     }
-
     case WM_DESTROY:
     {
         PostQuitMessage(0);
         break;
     }
-
     default:
         return DefWindowProcW(hWnd, msg, wParam, lParam);
     }
-
     return 0;
 }
-
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpCmdLine, int nShowCmd)
 {
     WNDCLASSW wc = {0};
@@ -160,9 +143,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpCmdLine, int nS
     wc.lpszClassName = L"LoginWindow";
     wc.hCursor = LoadCursorW(NULL, IDC_ARROW);
     wc.hbrBackground = (HBRUSH)(COLOR_BTNFACE + 1);
-
     RegisterClassW(&wc);
-
     // Create a centered window
     int screenWidth = GetSystemMetrics(SM_CXSCREEN);
     int screenHeight = GetSystemMetrics(SM_CYSCREEN);
@@ -170,7 +151,6 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpCmdLine, int nS
     int windowHeight = 320;
     int posX = (screenWidth - windowWidth) / 2;
     int posY = (screenHeight - windowHeight) / 2;
-
     HWND hWnd = CreateWindowW(
         L"LoginWindow",
         L"Login System",
@@ -183,10 +163,8 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpCmdLine, int nS
         NULL,
         hInst,
         NULL);
-
     ShowWindow(hWnd, nShowCmd);
     UpdateWindow(hWnd);
-
     MSG msg;
     while (GetMessageW(&msg, NULL, 0, 0))
     {
