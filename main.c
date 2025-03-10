@@ -145,13 +145,19 @@ void startAdventure()
     int choice;
     clearScreen();
     printf(YELLOW BOLD "\n=== Realm of Mysteries ===\n" RESET);
-    printf(BLUE "\nYou stand at a mystical crossroads. Which path will you take?\n" RESET);
-    printf(GREEN " 1. Jungle maa aghi badhnus (Venture into the Enchanted Forest)\n" RESET);
-    printf(MAGENTA " 2. Killa ko najik janu (Approach the Ancient Castle)\n" RESET);
-    printf(CYAN " 3. Gupha bhitra pasnu (Explore the Dark Cave)\n" RESET);
-    printf(YELLOW " 4. Gaun tira janu (Visit the Friendly Village)\n" RESET);
-    printf(GREEN " 5. Danda chadhnu (Climb the Majestic Mountain)\n" RESET);
-    printf(MAGENTA " 6. Sital Nadi ko bato apnanu (Follow the Serene River)\n" RESET);
+    printf(BLUE "\nYou stand at a mystical crossroads. Which path will you take?\n\n" RESET);
+
+    printf(GREEN " 1. Jungle maa aghi badhnus (Venture into the Enchanted Forest)\n\n" RESET);
+
+    printf(MAGENTA " 2. Killa ko najik janu (Approach the Ancient Castle)\n\n" RESET);
+
+    printf(CYAN " 3. Gupha bhitra pasnu (Explore the Dark Cave)\n\n" RESET);
+
+    printf(YELLOW " 4. Gaun tira janu (Visit the Friendly Village)\n\n" RESET);
+
+    printf(GREEN " 5. Danda chadhnu (Climb the Majestic Mountain)\n\n" RESET);
+
+    printf(MAGENTA " 6. Sital Nadi ko bato apnanu (Follow the Serene River)\n\n" RESET);
 
     printf(YELLOW "\nEnter your choice (1-6): " RESET);
 
@@ -197,11 +203,11 @@ void forestPath()
 {
     int choice;
     clearScreen();
-    printf(GREEN BOLD "\n--- Enchanted Forest ---\n" RESET);
-    printf(GREEN "\nIn the forest, you see a sparkling stream and a glowing tree.\n" RESET);
-    printf(YELLOW " 1. Drink from the stream\n" RESET);
-    printf(CYAN " 2. Approach the tree\n" RESET);
-    printf(YELLOW " 3. Follow the mysterious sound\n" RESET);
+    printf(GREEN BOLD "\n--- Enchanted Forest ---\n\n" RESET);
+    printf(GREEN "\nIn the forest, you see a sparkling stream and a glowing tree.\n\n" RESET);
+    printf(YELLOW " 1. Drink from the stream\n\n" RESET);
+    printf(CYAN " 2. Approach the tree\n\n" RESET);
+    printf(YELLOW " 3. Follow the mysterious sound\n\n" RESET);
     printf(YELLOW "\nEnter choice (1-3): " RESET);
 
     if (scanf("%d", &choice) != 1)
@@ -243,16 +249,15 @@ void forestPath()
         forestPath();
     }
 }
-
 void castlePath()
 {
     int choice;
     clearScreen();
-    printf(MAGENTA BOLD "\n--- Ancient Castle ---\n" RESET);
-    printf(MAGENTA "\nAt the castle, two doors beckon: one faded, one mysterious.\n" RESET);
-    printf(YELLOW " 1. Enter the left door\n" RESET);
-    printf(CYAN " 2. Open the right door\n" RESET);
-    printf(YELLOW " 3. Climb to the castle tower\n" RESET);
+    printf(MAGENTA BOLD "\n--- Ancient Castle ---\n\n" RESET);
+    printf(MAGENTA "\nAt the castle, two doors beckon: one faded, one mysterious.\n\n" RESET);
+    printf(YELLOW " 1. Enter the left door\n\n" RESET);
+    printf(CYAN " 2. Open the right door\n\n" RESET);
+    printf(YELLOW " 3. Climb to the castle tower\n\n" RESET);
     printf(YELLOW "\nEnter choice (1-3): " RESET);
 
     if (scanf("%d", &choice) != 1)
@@ -299,11 +304,11 @@ void cavePath()
 {
     int choice;
     clearScreen();
-    printf(CYAN BOLD "\n--- Dark Cave ---\n" RESET);
-    printf(CYAN "\nWithin the cave, a glowing artifact and a narrow passage await.\n" RESET);
-    printf(YELLOW " 1. Take the artifact\n" RESET);
-    printf(MAGENTA " 2. Enter the passage\n" RESET);
-    printf(YELLOW " 3. Search for hidden passages\n" RESET);
+    printf(CYAN BOLD "\n--- Dark Cave ---\n\n" RESET);
+    printf(CYAN "\nWithin the cave, a glowing artifact and a narrow passage await.\n\n" RESET);
+    printf(YELLOW " 1. Take the artifact\n\n" RESET);
+    printf(MAGENTA " 2. Enter the passage\n\n" RESET);
+    printf(YELLOW " 3. Search for hidden passages\n\n" RESET);
     printf(YELLOW "\nEnter choice (1-3): " RESET);
 
     if (scanf("%d", &choice) != 1)
@@ -350,11 +355,11 @@ void villagePath()
 {
     int choice;
     clearScreen();
-    printf(GREEN BOLD "\n--- Friendly Village ---\n" RESET);
-    printf(GREEN "\nIn the village, friendly villagers offer you food and shelter.\n" RESET);
-    printf(YELLOW " 1. Share a meal with the villagers\n" RESET);
-    printf(CYAN " 2. Ask for directions to the next adventure\n" RESET);
-    printf(YELLOW " 3. Trade items with the merchant\n" RESET);
+    printf(GREEN BOLD "\n--- Friendly Village ---\n\n" RESET);
+    printf(GREEN "\nIn the village, friendly villagers offer you food and shelter.\n\n" RESET);
+    printf(YELLOW " 1. Share a meal with the villagers\n\n" RESET);
+    printf(CYAN " 2. Ask for directions to the next adventure\n\n" RESET);
+    printf(YELLOW " 3. Trade items with the merchant\n\n" RESET);
     printf(YELLOW "\nEnter choice (1-3): " RESET);
 
     if (scanf("%d", &choice) != 1)
@@ -401,11 +406,11 @@ void mountainPath()
 {
     int choice;
     clearScreen();
-    printf(MAGENTA BOLD "\n--- Majestic Mountain ---\n" RESET);
-    printf(MAGENTA "\nThe mountain presents a steep climb and breathtaking views.\n" RESET);
-    printf(YELLOW " 1. Climb to the peak\n" RESET);
-    printf(CYAN " 2. Look for hidden caves\n" RESET);
-    printf(YELLOW " 3. Meditate at the summit\n" RESET);
+    printf(MAGENTA BOLD "\n--- Majestic Mountain ---\n\n" RESET);
+    printf(MAGENTA "\nThe mountain presents a steep climb and breathtaking views.\n\n" RESET);
+    printf(YELLOW " 1. Climb to the peak\n\n" RESET);
+    printf(CYAN " 2. Look for hidden caves\n\n" RESET);
+    printf(YELLOW " 3. Meditate at the summit\n\n" RESET);
     printf(YELLOW "\nEnter choice (1-3): " RESET);
 
     if (scanf("%d", &choice) != 1)
@@ -452,11 +457,11 @@ void riverPath()
 {
     int choice;
     clearScreen();
-    printf(CYAN BOLD "\n--- Serene River ---\n" RESET);
-    printf(CYAN "\nThe river flows gently, offering opportunities for exploration.\n" RESET);
-    printf(YELLOW " 1. Go fishing\n" RESET);
-    printf(MAGENTA " 2. Build a raft\n" RESET);
-    printf(CYAN " 3. Search for river stones\n" RESET);
+    printf(CYAN BOLD "\n--- Serene River ---\n\n" RESET);
+    printf(CYAN "\nThe river flows gently, offering opportunities for exploration.\n\n" RESET);
+    printf(YELLOW " 1. Go fishing\n\n" RESET);
+    printf(MAGENTA " 2. Build a raft\n\n" RESET);
+    printf(CYAN " 3. Search for river stones\n\n" RESET);
     printf(YELLOW "\nEnter choice (1-3): " RESET);
 
     if (scanf("%d", &choice) != 1)
@@ -540,6 +545,37 @@ void victory()
     }
 }
 
+void syncToServer(const char *faculty, const char *subject, int present, int total)
+{
+    // Open the file in append mode
+    FILE *file = fopen("Server.txt", "a");
+    if (file == NULL)
+    {
+        printf(COLOR_RED "Error opening Server.txt\n" COLOR_RESET);
+        return;
+    }
+
+    // Get the current date
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    char date[20];
+    snprintf(date, sizeof(date), "%02d-%02d-%d", tm.tm_mday, tm.tm_mon + 1, tm.tm_year + 1900);
+
+    // Writ formatted attendance record to the file
+    fprintf(file, "==========================================\n");
+    fprintf(file, "| Attendance Record                       |\n");
+    fprintf(file, "|-----------------------------------------|\n");
+    fprintf(file, "| Faculty: %-30s |\n", faculty);
+    fprintf(file, "| Subject: %-30s |\n", subject);
+    fprintf(file, "| Date   : %-30s |\n", date);
+    fprintf(file, "| Present: %-3d / Total: %-3d             |\n", present, total);
+    fprintf(file, "==========================================\n\n");
+
+    // Close
+    fclose(file);
+
+    printf(COLOR_GREEN "Attendance record synced successfully!\n" COLOR_RESET);
+}
 /*----------------------------------------------------------
     Main Function
 ----------------------------------------------------------*/
@@ -572,35 +608,6 @@ int main()
     {
         printf("\n" COLOR_RED "[ X ] Login failed! Program terminating." COLOR_RESET "\n");
         return 1;
-    }
-
-    /* Ask if user wants to load attendance records for a specific faculty */
-    char loadChoice;
-    printf(COLOR_YELLOW "\nDo you want to load attendance records for a faculty? (Y/N): " COLOR_RESET);
-    scanf(" %c", &loadChoice);
-    clearInputBuffer();
-    if (toupper(loadChoice) == 'Y')
-    {
-        char facultyToLoad[MAX_FACULTY];
-        printf(COLOR_YELLOW "Enter Faculty/Department name to load: " COLOR_RESET);
-        scanf(" %[^\n]s", facultyToLoad);
-        clearInputBuffer();
-        recordCount = loadFacultyAttendance(facultyToLoad, records);
-        if (recordCount > 0)
-            printf(COLOR_GREEN "\nLoaded %d attendance record(s) for faculty %s from file.\n" COLOR_RESET, recordCount, facultyToLoad);
-        else
-            printf(COLOR_YELLOW "\nNo attendance records found for faculty %s. Starting fresh.\n" COLOR_RESET, facultyToLoad);
-    }
-    else
-    {
-        recordCount = 0;
-    }
-
-    /* Load students from file */
-    studentCount = loadStudentsFromFile();
-    if (studentCount > 0)
-    {
-        printf(COLOR_GREEN "\nLoaded %d student(s) from file.\n" COLOR_RESET, studentCount);
     }
 
     /* Display welcome banner */
@@ -651,8 +658,90 @@ int main()
         case 11:
             startAdventure();
             break;
+        case 12: // ✅ Enhanced Sync to Server Option
+        {
+            char faculty[50], subject[50];
+            int present = 0, total = 0;
+            char input[10];
+
+            // Clear screen and show header
+            printf("\n" COLOR_CYAN "=== Sync Attendance to Server ===\n" COLOR_RESET);
+
+            // Faculty Name Input with validation
+            do
+            {
+                printf(COLOR_YELLOW "\nEnter faculty name (max 49 characters): " COLOR_RESET);
+                fgets(faculty, 50, stdin);
+                faculty[strcspn(faculty, "\n")] = 0;
+
+                if (strlen(faculty) == 0)
+                {
+                    printf(COLOR_RED "[ ! ] Faculty name cannot be empty. Please try again.\n" COLOR_RESET);
+                }
+            } while (strlen(faculty) == 0);
+
+            // Subject Input with validation
+            do
+            {
+                printf(COLOR_YELLOW "\nEnter subject (max 49 characters): " COLOR_RESET);
+                fgets(subject, 50, stdin);
+                subject[strcspn(subject, "\n")] = 0;
+
+                if (strlen(subject) == 0)
+                {
+                    printf(COLOR_RED "[ ! ] Subject cannot be empty. Please try again.\n" COLOR_RESET);
+                }
+            } while (strlen(subject) == 0);
+
+            // Present Count Input with validation
+            do
+            {
+                printf(COLOR_YELLOW "\nEnter number of present students (0 or more): " COLOR_RESET);
+                fgets(input, sizeof(input), stdin);
+                if (sscanf(input, "%d", &present) != 1 || present < 0)
+                {
+                    printf(COLOR_RED "[ ! ] Please enter a valid number (0 or greater).\n" COLOR_RESET);
+                    present = -1;
+                }
+            } while (present < 0);
+
+            // Total Students Input with validation
+            do
+            {
+                printf(COLOR_YELLOW "\nEnter total number of students (must be >= %d): " COLOR_RESET, present);
+                fgets(input, sizeof(input), stdin);
+                if (sscanf(input, "%d", &total) != 1 || total < present)
+                {
+                    printf(COLOR_RED "[ ! ] Please enter a valid number (>= %d).\n" COLOR_RESET, present);
+                    total = -1;
+                }
+            } while (total < present);
+
+            // Confirmation
+            printf("\n" COLOR_CYAN "Please confirm the following details:\n" COLOR_RESET);
+            printf("Faculty: %s\n", faculty);
+            printf("Subject: %s\n", subject);
+            printf("Present: %d\n", present);
+            printf("Total: %d\n", total);
+            printf(COLOR_YELLOW "Is this correct? (y/n): " COLOR_RESET);
+
+            char confirm;
+            fgets(input, sizeof(input), stdin);
+            sscanf(input, "%c", &confirm);
+
+            if (confirm == 'y' || confirm == 'Y')
+            {
+                syncToServer(faculty, subject, present, total);
+                printf(COLOR_GREEN "[ ✓ ] Attendance synced successfully!\n" COLOR_RESET);
+            }
+            else
+            {
+                printf(COLOR_YELLOW "[ i ] Operation cancelled by user.\n" COLOR_RESET);
+            }
+        }
+        break;
         default:
-            printf("\n" COLOR_RED "[ ! ] Invalid choice! Please try again.\n" COLOR_RESET);
+            printf("\n" COLOR_RED "[ ! ] Invalid choice! Please select an option between 1-12.\n" COLOR_RESET);
         }
     }
     return 0;
@@ -1343,21 +1432,28 @@ void getCurrentDateTime(char *date, char *currentTime)
  */
 void displayMenu()
 {
-    printf("\n" COLOR_CYAN "+-------------------------------------------------+\n" COLOR_RESET);
-    printf(COLOR_CYAN "|         ATTENDANCE MANAGEMENT MENU              |\n" COLOR_RESET);
-    printf(COLOR_CYAN "+-------------------------------------------------+\n" COLOR_RESET);
-    printf(COLOR_YELLOW "| 1.  Add Students to Database                   |\n" COLOR_RESET);
-    printf(COLOR_YELLOW "| 2.  Take Batch Attendance                      |\n" COLOR_RESET);
-    printf(COLOR_YELLOW "| 3.  View Attendance                            |\n" COLOR_RESET);
-    printf(COLOR_YELLOW "| 4.  Search by Date                             |\n" COLOR_RESET);
-    printf(COLOR_YELLOW "| 5.  Search by Student                          |\n" COLOR_RESET);
-    printf(COLOR_YELLOW "| 6.  Generate Attendance Report                 |\n" COLOR_RESET);
-    printf(COLOR_YELLOW "| 7.  Edit Attendance                            |\n" COLOR_RESET);
-    printf(COLOR_YELLOW "| 8.  Delete Attendance                          |\n" COLOR_RESET);
-    printf(COLOR_YELLOW "| 9.  Display Data in JSON Format                |\n" COLOR_RESET);
-    printf(COLOR_YELLOW "| 10. Exit                                       |\n" COLOR_RESET);
-    printf(COLOR_YELLOW "| 11. Bored Doing Serious Stuffs TRY THIS!!      |\n" COLOR_RESET);
-    printf(COLOR_CYAN "+-------------------------------------------------+\n" COLOR_RESET);
+    // Header
+    printf("\n" COLOR_CYAN "===================================================\n" COLOR_RESET);
+    printf(COLOR_CYAN "|    " COLOR_GREEN "ATTENDANCE MANAGEMENT SYSTEM" COLOR_CYAN "               |\n" COLOR_RESET);
+    printf(COLOR_CYAN "===================================================\n" COLOR_RESET);
+
+    // Menu options with varied text colors
+    printf(COLOR_YELLOW "  [1]  " COLOR_CYAN "Add Students to Database" COLOR_GREEN "          \n" COLOR_RESET);
+    printf(COLOR_YELLOW "  [2]  " COLOR_CYAN "Take Batch Attendance" COLOR_GREEN "             \n" COLOR_RESET);
+    printf(COLOR_YELLOW "  [3]  " COLOR_CYAN "View Attendance" COLOR_GREEN "                   \n" COLOR_RESET);
+    printf(COLOR_YELLOW "  [4]  " COLOR_CYAN "Search by Date" COLOR_GREEN "                    \n" COLOR_RESET);
+    printf(COLOR_YELLOW "  [5]  " COLOR_CYAN "Search by Student" COLOR_GREEN "                 \n" COLOR_RESET);
+    printf(COLOR_YELLOW "  [6]  " COLOR_CYAN "Generate Attendance Report" COLOR_GREEN "        \n" COLOR_RESET);
+    printf(COLOR_YELLOW "  [7]  " COLOR_CYAN "Edit Attendance" COLOR_GREEN "                  \n" COLOR_RESET);
+    printf(COLOR_YELLOW "  [8]  " COLOR_RED "Delete Attendance" COLOR_RED "                \n" COLOR_RESET);
+    printf(COLOR_YELLOW "  [9]  " COLOR_CYAN "Display Data in JSON Format" COLOR_GREEN "       \n" COLOR_RESET);
+    printf(COLOR_YELLOW " [10]  " COLOR_RED "Exit" COLOR_RED "                      \n" COLOR_RESET);
+    printf(COLOR_YELLOW " [11]  " COLOR_MAGENTA "Bored Doing the Serious stuff ? Try this Adventure!" COLOR_MAGENTA "          \n" COLOR_RESET);
+    printf(COLOR_YELLOW " [12]  " COLOR_CYAN "Sync Attendance to Server" COLOR_GREEN "        \n" COLOR_RESET);
+
+    // Footer
+    printf(COLOR_CYAN "===================================================\n" COLOR_RESET);
+    printf(COLOR_GREEN "  Select an option (1-12): " COLOR_RESET);
 }
 
 /**
